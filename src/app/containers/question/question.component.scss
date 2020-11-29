@@ -1,13 +1,5 @@
 $font-stack: arial;
 $font-weight-max: 700;
-
-.quiz-bg{
-  background: #59caff url(../../../assets/images/bg-cloud.png);
-  width: 1000px;
-  height: 800px;
-  margin: 0px auto;
-  animation: move 5s infinite linear;
-}
 @keyframes move {
   from { background-position: 0 0; }
   to { background-position: 0 -500px; }

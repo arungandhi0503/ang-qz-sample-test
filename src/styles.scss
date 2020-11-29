@@ -1,5 +1,11 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-
+.quiz-bg{
+  background: #59caff url(assets/images/bg-cloud.png);
+  width: 1000px;
+  height: 800px;
+  margin: 0px auto;
+  animation: move 5s infinite linear;
+}
 mat-card {
   margin: 0 auto;
   margin-bottom: 20px;
