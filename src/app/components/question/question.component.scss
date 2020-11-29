@@ -1,0 +1,186 @@
+$font-stack: Space Mono, monospace;
+$font-weight-max: 900;
+
+ol {
+  margin-top: 15px;
+  margin-left: -40px;
+  cursor: pointer;
+}
+ol li {
+  list-style-type: none;
+}
+
+.radio-options {
+  margin-bottom: 5px;
+  margin-left: 0.5rem;
+  padding: 4px;
+  display: inline-block;
+}
+
+.option {
+  width: 120px;
+  height:150px;
+  line-height: 150px;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  background: transparent;
+  vertical-align: middle;
+  font-size: 24px;
+
+}
+
+::ng-deep .mat-radio-label-content{
+  width: 100%;
+  text-align: center;
+  padding-left: 0px !important;
+}
+
+.option:hover {
+  outline: 2px solid #007aff;
+}
+
+.is-correct {
+  background-color: #00c853 !important;
+}
+.is-incorrect {
+  background-color: #ff0000 !important;
+}
+
+.feedback-icon {
+  position: absolute;
+  right: 0;
+  margin-right: 40px;
+  margin-top: -25px;
+}
+
+section.messages {
+  display: flex;
+  justify-content: center;
+
+  .message {
+    font-family: $font-stack;
+    font-weight: $font-weight-max;
+    font-size: 16px;
+    font-style: italic;
+    text-align: center !important;
+    margin: 10px 0 0 0;
+    padding: 10px !important;
+    width: 32rem !important;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center !important;
+    margin: 0 auto !important;
+    margin-top: 10px !important;
+  }
+  .correct-message {
+    font-weight: $font-weight-max;
+    font-style: italic;
+    border: 2px solid #007aff;
+    border-radius: 5px;
+    color: #00c853 !important;
+  }
+  .wrong-message {
+    font-weight: $font-weight-max;
+    font-style: italic;
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    color: #ff0000 !important;
+    padding: 5px;
+  }
+  mat-icon.sentiment {
+    font-size: 30px !important;
+    color: #9acd32;
+    margin-right: -50px !important;
+    vertical-align: top;
+    margin-top: 18px;
+  }
+  pre {
+    font-size: 17px;
+    margin-top: 10px;
+  }
+}
+
+::ng-deep .mat-radio-button .mat-radio-container {
+  display: none;
+}
+
+body { margin:20px; background:hsl(70, 31%, 85%); text-align:center; }
+
+.balloon {
+  display:inline-block;
+   width:120px;
+  height:145px;
+  background:hsl(215,50%,65%);
+  border-radius:80%;
+  position:relative;
+  box-shadow:inset -10px -10px 0 rgba(0,0,0,0.07);
+  margin:20px 30px;
+  transition:transform 0.5s ease;
+  z-index:10;
+  animation:balloons 4s ease-in-out infinite;
+  transform-origin:bottom center;
+}
+
+@keyframes balloons {
+  0%,100%{ transform:translateY(0) rotate(-4deg); }
+  50%{ transform:translateY(100%) rotate(4deg); }
+}
+
+
+.balloon:before {
+  content:"▲";
+  font-size:20px;
+  color:hsl(215,30%,50%);
+  display:block;
+  text-align:center;
+  width:100%;
+  position:absolute;
+  bottom:-12px;
+  z-index:-100;
+}
+
+.balloon:after {
+ display:inline-block; top:145px;
+ left:60px;
+  position:absolute;
+  height:250px;
+  width:1px;
+  margin:0 auto;
+  content:"";
+  background:rgba(0,0,0,0.2); 
+}
+
+.mat-radio-group > .radio-options:nth-child(1) > .balloon {
+  background: #fcd303;
+  animation-duration:3.5s;
+  &:before{
+    color:#cfac02;
+  }
+}
+
+.mat-radio-group > .radio-options:nth-child(2) > .balloon {
+  background: #4ee004;
+  animation-duration:3s;
+  &:before{
+    color:#3bb000;
+  }
+}
+
+.mat-radio-group > .radio-options:nth-child(3) > .balloon {
+  background: #055deb;
+  animation-duration:4.5s;
+  &:before{
+    color:#0445b0;
+  }
+}
+
+.mat-radio-group > .radio-options:nth-child(4) > .balloon {
+  background: #f700f7;
+  animation-duration:5s;
+  &:before{
+    color:#cf02cf;
+  } 
+}
+
