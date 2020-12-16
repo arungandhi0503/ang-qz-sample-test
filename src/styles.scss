@@ -1,11 +1,10 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-.quiz-bg{
-  background: #59caff url(https://cdn.jsdelivr.net/gh/arungandhi0503/ang-qz-sample-test@master/src/assets/images/bg-cloud.png);
-  width: 1000px;
-  height: 800px;
-  margin: 0px auto;
-  animation: move 5s infinite linear;
+
+body{
+  font-family: 'Hind Madurai', Arial, sans-serif;
+  background: rgb(2,0,36) linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(2,2,82,1) 53%, #000 100%) no-repeat; 
 }
+
 mat-card {
   margin: 0 auto;
   margin-bottom: 20px;
@@ -28,16 +27,25 @@ mat-card:hover {
 
 mat-card-title {
   margin: -10px 0 10px 10px;
-  font-family: "Monospace", monospace;
+  font-family: "Hind Madurai", Arial;
   font-size: 30px !important;
   font-weight: 900 !important;
   color: #007aff;
 }
 mat-card-subtitle {
   text-align: center;
-  font-family: "Space Mono", monospace;
+  font-family: "Hind Madurai", Arial;
   font-style: italic;
   font-size: 17.5px !important;
   font-weight: 900 !important;
   color: #808080;
+}
+
+.header{
+  position: relative;
+  margin:20px 0px;
+}
+
+.vid{
+  margin: 10px auto;
 }

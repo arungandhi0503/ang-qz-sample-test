@@ -42,7 +42,7 @@ export class QuestionComponent implements OnInit, OnChanges {
   displayExplanation(): void {
     const questionElem = document.getElementById('question');
     if (questionElem !== null) {
-      questionElem.innerHTML = 'Option ' + this.question.answer + ' was correct because ' + this.question.explanation + '.';
+      questionElem.innerHTML = 'நீங்கள் கூறியது சரி! சரியான பதில் ' + this.question.explanation + '.';
       questionElem.style.border = this.grayBorder;
     }
   }

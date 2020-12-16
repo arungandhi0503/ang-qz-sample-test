@@ -1,14 +1,14 @@
 $font-stack: arial;
 $font-weight-max: 700;
-@keyframes move {
-  from { background-position: 0 0; }
-  to { background-position: 0 -500px; }
+
+.quiz-bg{
+ /* background: #59caff url(../../../assets/images/bg-cloud.png);*/
+  width: 1000px;
+  height: auto;
+  min-height: 600px;
+  margin: 0px auto;
 }
 
-@-webkit-keyframes move {
-  from { background-position: 0 0; }
-  to { background-position: 0 -500px; }
-}
 
 mat-card-header {
   display: block;
@@ -33,18 +33,20 @@ mat-card-header {
   width: 90%;
   text-align: left;
 }
-section.scoreboard {
+section.header {
 
   .row {
     display: inline;
   }
   .score {
-    float: left;
+    float: right;
     background: #1fb804;
-    padding: 20px;
     color: #fff;
     width: 10%;
     min-height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 20px;
 
   }
 
@@ -63,7 +65,7 @@ section.scoreboard {
     padding-top: 20px;
   }
   .question-title {
-    float: left;
+    float: right;
     font-family: $font-stack;
   }
 
@@ -79,7 +81,7 @@ section.scoreboard {
   .scoreboard {
     font-family: $font-stack;
     font-weight: $font-weight-max;
-    font-size: 24px;
+    font-size: 20px;
     color: #fff;
     display: inline-block;
     width: auto;
@@ -89,7 +91,6 @@ section.scoreboard {
     font-weight: $font-weight-max;
     font-size: 18px;
     position: relative;
-    top: -5px;
   }
 }
 
@@ -99,12 +100,12 @@ section.scoreboard {
   font-size: 20px !important;
   float: left;
   border-radius: 0px;
-  padding: 20px;
-  background-color: #006699;
-  color: #fff;
+  padding: 20px 0px;
+  color: #1fb804;
   width: 90%;
   height: auto;
   min-height: 100px;
+  border: none !important;
 }
 
 section.paging {

@@ -18,11 +18,11 @@
         <section class="messages">
           <div *ngIf="isCorrect(option.optionValue) && !!isIncorrect(option.optionValue)">
             <mat-icon class="sentiment">sentiment_very_satisfied</mat-icon>&nbsp;&nbsp;
-            <pre class="message correct-message">  You&apos;re right! The correct answer is Option {{ question.answer }}.</pre>
+            <pre class="message correct-message">  நீங்கள் கூறியது சரி! சரியான பதில் {{ question.explanation }}.</pre>
           </div>
           <div *ngIf="isIncorrect(option.optionValue)">
             <mat-icon class="sentiment">sentiment_very_dissatisfied</mat-icon>&nbsp;&nbsp;
-            <pre class="message wrong-message">  That&apos;s wrong. The correct answer is Option {{ question.answer }}.</pre>
+            <pre class="message wrong-message">  அது தவறு. சரியான பதில் {{ question.explanation }}.</pre>
           </div>
         </section>
       </div>

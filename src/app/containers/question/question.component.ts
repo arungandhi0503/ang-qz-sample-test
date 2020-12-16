@@ -35,28 +35,15 @@ export class QuestionComponent implements OnInit {
   allQuestions: QuizQuestion[] = [
     {
       questionId: 1,
-      questionText: "How many days do we have in a week?",
+      questionText: "அன்பு இருந்தால் __________________ ஆகும்",
       options: [
-        { optionValue: "1", optionText: "Seven" },
-        { optionValue: "2", optionText: "Five" },
-        { optionValue: "3", optionText: "Six" },
-        { optionValue: "4", optionText: "Four" }
-      ],
-      answer: "1",
-      explanation: "Seven",
-      selectedOption: ""
-    },
-    {
-      questionId: 2,
-      questionText: "How many colors are there in a rainbow?",
-      options: [
-        { optionValue: "1", optionText: "6" },
-        { optionValue: "2", optionText: "7" },
-        { optionValue: "3", optionText: "5" },
-        { optionValue: "4", optionText: "4" }
+        { optionValue: "1", optionText: "முடியாததும்" },
+        { optionValue: "2", optionText: "ஆகாததும்" },
+        { optionValue: "3", optionText: "நடக்காததும்" },
+        { optionValue: "4", optionText: "நிகழாததும்" }
       ],
       answer: "2",
-      explanation: "7",
+      explanation: "ஆகாததும்",
       selectedOption: ""
     }
   ];
