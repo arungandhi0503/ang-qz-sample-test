@@ -34,6 +34,7 @@ export class QuestionComponent implements OnInit, OnChanges {
   }
 
   radioChange(answer: string) {
+    debugger
     this.question.selectedOption = answer;
     this.answer.emit(answer);
     this.displayExplanation();
@@ -42,14 +43,14 @@ export class QuestionComponent implements OnInit, OnChanges {
   displayExplanation(): void {
     const questionElem = document.getElementById('question');
     if (questionElem !== null) {
-      questionElem.innerHTML = 'நீங்கள் கூறியது சரி! சரியான பதில் ' + this.question.explanation + '.';
+       questionElem.innerHTML = '<div class="display_question_wrapper">' + this.question.questionText + '</div>';
       questionElem.style.border = this.grayBorder;
     }
   }
 
   // mark the correct answer regardless of which option is selected once answered
   isCorrect(option: string): boolean {
-    return this.question.selectedOption && option === this.question.answer;
+    return this.question.selectedOption === this.question.answer;
   }
 
   // mark incorrect answer if selected

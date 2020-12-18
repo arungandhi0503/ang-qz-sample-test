@@ -2,16 +2,9 @@
     <div class="quiz-bg">
     <section class="header">
       <div class="row">
-        <div class="score">
-          <span class="leader">Score</span>
-          <span class="scoreboard">
-            {{ correctAnswersCount }}/{{ totalQuestions }}
-          </span>
-        </div>
-
-        <div class="question-title" id="question"><div class="badge" *ngIf="question && question.questionId <= totalQuestions">
+        <div class="question-title" id="question"><!--<div class="badge" *ngIf="question && question.questionId <= totalQuestions">
           <span>Question {{ question.questionId }} of {{ totalQuestions }}</span>
-        </div> 
+        </div> -->
         <div class="pad-top20">
         {{ question.questionText }}
         </div>  
@@ -25,8 +18,8 @@
       </div>
     </section>
     <section class="vid">
-    <video width="1000" controls>
-      <source src="https://stackblitz.com/files/angular-ivy-vgfrjg/github/arungandhi0503/ang-qz-sample-test/master/src/assets/video/question{{question.questionId}}.mp4" type="video/mp4">
+    <video width="600" controls autoplay="autoplay" loop="true">
+      <source src="https://cdn.jsdelivr.net/gh/arungandhi0503/ang-qz-sample-test@master/src/assets/video/question{{question.questionId}}.mp4" type="video/mp4">
       Your browser does not support HTML video.
     </video>
   </section>
@@ -46,9 +39,9 @@
           <button type="button" (click)="navigateToResults()">
             Show Your Score
           </button>
-        </div>-
+        </div>
 
-    <!--<section class="progress-bar">
+    <section class="progress-bar">
       <ngb-progressbar *ngIf="(progressValue >= 0 && progressValue <= 100) &&
                               question && question.questionId <= totalQuestions"
                        type="success" [striped]="true" [animated]="true" [value]="progressValue">

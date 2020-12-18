@@ -49,4 +49,32 @@ mat-card-subtitle {
 
 .vid{
   margin: 10px auto;
+  text-align: center;
+}
+
+.display_question_wrapper{ position: relative; padding-top: 20px;}
+.display_text{ position: absolute; 
+  top: -6px;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
 }

@@ -7,6 +7,7 @@ $font-weight-max: 700;
   height: auto;
   min-height: 600px;
   margin: 0px auto;
+  position: relative;
 }
 
 
@@ -23,7 +24,7 @@ mat-card-header {
     margin-right: 15px;
     margin-left: 5px !important;
     text-align: center;
-
+    
     .subtitle2 {
       display: block;
     }

@@ -11,13 +11,14 @@ ol li {
   list-style-type: none;
   font-size: 14px;
   font-weight: normal;
+  cursor: url(https://cdn.jsdelivr.net/gh/arungandhi0503/ang-qz-sample-test@master/src/assets/images/ico_cursor.png) 120 120, auto;
 }
 
 .radio-options {
   margin-bottom: 5px;
-  margin-left: 5rem;
+  margin-left: 4rem;
   padding: 4px;
-  display: flex;
+  display: inline-block;
 }
 
 .option {
@@ -43,14 +44,67 @@ ol li {
   outline: 2px solid #007aff;
 }
 
-.is-correct {
-  background-color: #00c853 !important;
-  border-radius: 50%;
+
+.is-correct
+{
+animation:bounceOut 1s;
+-webkit-animation:bounceOut 1s; /* Safari and Chrome */
 }
+
+@keyframes bounceOut {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  25% {
+    -webkit-transform: scale(.95);
+    -ms-transform: scale(.95);
+    transform: scale(.95);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(.3);
+    -ms-transform: scale(.3);
+    transform: scale(.3);
+  }
+}
+
 .is-incorrect {
-  background-color: #ff0000 !important;
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
   border-radius: 50%;
+  perspective: 1000px;
 }
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
 
 .feedback-icon {
   position: absolute;
@@ -60,9 +114,10 @@ ol li {
 }
 
 section.messages {
-  display: flex;
-  justify-content: center;
-
+  position: absolute;
+  top: 0px;
+  top: 10px;
+  left: 210px;
   .message {
     font-family: $font-stack;
     font-weight: $font-weight-max;
@@ -71,7 +126,7 @@ section.messages {
     text-align: center !important;
     margin: 10px 0 0 0;
     padding: 10px !important;
-    width: 32rem !important;
+    width: auto !important;
     display: inline-flex;
     align-items: center;
     vertical-align: middle;
@@ -81,9 +136,7 @@ section.messages {
   }
   .correct-message {
     font-weight: $font-weight-max;
-    font-style: italic;
-    border: 2px solid #007aff;
-    border-radius: 5px;
+    font-size: 24px;
     color: #00c853 !important;
   }
   .wrong-message {
@@ -131,7 +184,7 @@ body { margin:20px; background:hsl(70, 31%, 85%); text-align:center; }
     transform: translateY(100vh);
     will-change: transform;*/
     border-radius:50%;
-   animation-fill-mode:both;
+   //animation-fill-mode:both;
    z-index:10;
    width:120px;
    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px #fff;
@@ -156,7 +209,7 @@ body { margin:20px; background:hsl(70, 31%, 85%); text-align:center; }
 }
 
 .mat-radio-group > .radio-options:nth-child(1) > .balloon {
-  animation:animateBubble 15s linear infinite, sideWays 5s ease-in infinite alternate;
+  //animation:animateBubble 15s linear infinite, sideWays 5s ease-in infinite alternate;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px #fff;
   -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px #fff;
   &:before{
@@ -164,7 +217,7 @@ body { margin:20px; background:hsl(70, 31%, 85%); text-align:center; }
   }
   width:150px;
   height:150px;
-  left: 10%;
+  //left: 10%;
   .option {
     width:150px;
     height:150px;
@@ -173,13 +226,13 @@ body { margin:20px; background:hsl(70, 31%, 85%); text-align:center; }
 }
 
 .mat-radio-group > .radio-options:nth-child(2) > .balloon {
-  animation:animateBubble 20s linear infinite, sideWays 10s ease-in-out infinite alternate;
+  //animation:animateBubble 20s linear infinite, sideWays 10s ease-in-out infinite alternate;
   &:before{
     color:#3bb000;
   }
   width:180px;
   height:180px;
-  left: 25%;
+  //left: 25%;
 
   .option {
     width:180px;
@@ -189,13 +242,13 @@ body { margin:20px; background:hsl(70, 31%, 85%); text-align:center; }
 }
 
 .mat-radio-group > .radio-options:nth-child(3) > .balloon {
-  animation:animateBubble 25s linear infinite, sideWays 15s ease-in infinite alternate;
+  /* animation:animateBubble 25s linear infinite, sideWays 15s ease-in infinite alternate;*/
   &:before{
     color:#0445b0;
   }
   width:160px;
   height:160px;
-  left: 50%;
+  //left: 50%;
 
   .option {
     width:160px;
@@ -206,18 +259,18 @@ body { margin:20px; background:hsl(70, 31%, 85%); text-align:center; }
 }
 
 .mat-radio-group > .radio-options:nth-child(4) > .balloon {
-  animation:animateBubble 30s linear infinite, sideWays 25s ease-in-out infinite alternate;
+  /* animation:animateBubble 30s linear infinite, sideWays 25s ease-in-out infinite alternate; */
   &:before{
     color:#cf02cf;
   }
-  width:120px;
-  left: 70%;
+  width:150px;
+  //left: 70%;
 
-  height:120px; 
+  height:150px; 
   .option {
-    width:120px;
-    height:120px;
-    line-height: 120px;
+    width:150px;
+    height:150px;
+    line-height: 150px;
 
   }
 }
