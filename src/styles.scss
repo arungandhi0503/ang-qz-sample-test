@@ -1,15 +1,18 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-
+*{
+  cursor: url(https://cdn.jsdelivr.net/gh/arungandhi0503/ang-qz-sample-test@master/src/assets/images/ico_cursor.png) 120 120, auto !important;
+  
+}
 body{
   font-family: 'Hind Madurai', Arial, sans-serif;
   background: rgb(2,0,36) linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(2,2,82,1) 53%, #000 100%) no-repeat; 
-  margin:auto 15px;
+  margin:auto 0px;
 }
 
 mat-card {
   margin: 0 auto;
   margin-bottom: 20px;
-  margin-top: 5%;
+  margin-top: 0%;
   margin-left: 25%;
   width: 43rem;
   height: inherit;
@@ -44,7 +47,8 @@ mat-card-subtitle {
 
 .header{
   position: relative;
-  margin:20px 0px;
+  margin:0px 0px;
+  z-index: 111;
 }
 
 .vid{
@@ -54,13 +58,15 @@ mat-card-subtitle {
 
 .display_question_wrapper{ position: relative; padding-top: 20px;}
 .display_text{ position: absolute; 
-  top: -6px;
+  top: 0px;
+  left: 10px;
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
+  z-index: 111;
 }
 
 
@@ -78,3 +84,9 @@ mat-card-subtitle {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 }
+
+codelab-quiz-question{
+  z-index: 1111111111111 !important;
+}
+
+

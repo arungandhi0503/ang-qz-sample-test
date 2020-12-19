@@ -3,7 +3,7 @@ $font-weight-max: 700;
 
 .quiz-bg{
  /* background: #59caff url(../../../assets/images/bg-cloud.png);*/
-  width: 1000px;
+  width: 100%;
   height: auto;
   min-height: 600px;
   margin: 0px auto;
@@ -101,12 +101,13 @@ section.header {
   font-size: 20px !important;
   float: left;
   border-radius: 0px;
-  padding: 20px 0px;
+  padding: 20px 20px;
   color: #1fb804;
-  width: 90%;
+  width: 100%;
   height: auto;
   min-height: 100px;
   border: none !important;
+  background:#000;
 }
 
 section.paging {
@@ -151,3 +152,10 @@ section.progress-bar {
   }
 }
 
+.vid-res{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}

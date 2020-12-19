@@ -2,24 +2,29 @@ $font-stack: Space Mono, monospace;
 $font-weight-max: 900;
 
 ol {
-  margin-top: 15px;
+  margin-top: 200px;
   margin-left: -40px;
-  cursor: pointer;
-  position: relative;
+  position: absolute;
+  width: 100%;
 }
 ol li {
   list-style-type: none;
-  font-size: 14px;
-  font-weight: normal;
-  cursor: url(https://cdn.jsdelivr.net/gh/arungandhi0503/ang-qz-sample-test@master/src/assets/images/ico_cursor.png) 120 120, auto;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .radio-options {
   margin-bottom: 5px;
-  margin-left: 4rem;
+  margin-right: 5rem;
   padding: 4px;
   display: inline-block;
 }
+
+.radio-options:hover {
+ outline: 0px;
+ border: 0px;
+}
+
 
 .option {
   width: 120px;
@@ -41,7 +46,7 @@ ol li {
 }
 
 .option:hover {
-  outline: 2px solid #007aff;
+  outline: 0px solid #007aff;
 }
 
 
@@ -190,11 +195,23 @@ body { margin:20px; background:hsl(70, 31%, 85%); text-align:center; }
    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px #fff;
    -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px #fff;
   height:120px;
+  background: radial-gradient(circle at top, white, rgba(255, 255, 255, 0) 58%);
   -webkit-transform: scale(1);
 	-moz-transform: scale(1);
   transform: scale(1);
   position: relative;
-  
+  &:before {
+      content: "";
+      top: 1%;
+      left: 5%;
+      width: 90%;
+      height: 90%;
+      border-radius: 100%;
+      background: radial-gradient(circle at top, white, rgba(255, 255, 255, 0) 58%);
+      -webkit-filter: blur(5px);
+      filter: blur(5px);
+      z-index: 2; 
+  }
 }
 
 
@@ -215,13 +232,17 @@ body { margin:20px; background:hsl(70, 31%, 85%); text-align:center; }
   &:before{
     color:#cfac02;
   }
-  width:150px;
-  height:150px;
+  width:200px;
+  height:200px;
+  top: 150px;
   //left: 10%;
   .option {
-    width:150px;
-    height:150px;
-    line-height: 150px;
+    width:200px;
+    height:200px;
+    line-height: 200px;
+  }
+ li {
+    color: #ffce08 !important;
   }
 }
 
@@ -230,14 +251,18 @@ body { margin:20px; background:hsl(70, 31%, 85%); text-align:center; }
   &:before{
     color:#3bb000;
   }
-  width:180px;
-  height:180px;
+  width:250px;
+  height:250px;
+  top:50px;
   //left: 25%;
 
   .option {
-    width:180px;
-    height:180px;
-    line-height: 180px;
+    width:250px;
+    height:250px;
+    line-height: 250px;
+  }
+  li {
+    color: #ff00e1 !important;
   }
 }
 
@@ -246,15 +271,20 @@ body { margin:20px; background:hsl(70, 31%, 85%); text-align:center; }
   &:before{
     color:#0445b0;
   }
-  width:160px;
-  height:160px;
+  width:210px;
+  height:210px;
+  top: 100px;
+
   //left: 50%;
 
   .option {
-    width:160px;
-    height:160px;
-    line-height: 160px;
+    width:210px;
+    height:210px;
+    line-height: 210px;
 
+  }
+  li {
+    color: #00ffaa !important;
   }
 }
 
@@ -263,19 +293,22 @@ body { margin:20px; background:hsl(70, 31%, 85%); text-align:center; }
   &:before{
     color:#cf02cf;
   }
-  width:150px;
+  width:240px;
   //left: 70%;
-
-  height:150px; 
+  top: 25px;
+  height:240px; 
   .option {
-    width:150px;
-    height:150px;
-    line-height: 150px;
+    width:240px;
+    height:240px;
+    line-height: 240px;
 
+  }
+  li{
+    color: #6aff00;
   }
 }
 
-
+.mat-radio-group{ text-align: center;  display: block}
 
 /* KEYFRAMES */
 
