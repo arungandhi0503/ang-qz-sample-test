@@ -4,7 +4,7 @@
   
 }
 body{
-  font-family: 'Hind Madurai', Arial, sans-serif;
+  font-family: 'Catamaran', sans-serif;
   background: rgb(2,0,36) linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(2,2,82,1) 53%, #000 100%) no-repeat; 
   margin:auto 0px;
 }
@@ -59,7 +59,7 @@ mat-card-subtitle {
 .display_question_wrapper{ position: relative; padding-top: 20px;}
 .display_text{ position: absolute; 
   top: 0px;
-  left: 10px;
+  left: 45px;
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
   -webkit-animation-fill-mode: both;
