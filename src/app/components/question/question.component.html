@@ -2,7 +2,7 @@
 
 <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
   <section class="messages" *ngFor="let option of question.options">
-    <div *ngIf="isCorrect(option.optionValue)" [ngClass]="{'display_text': isCorrect(option.optionValue)}" >
+    <div *ngIf="isCorrect(option.optionValue)" [ngClass]="{'display_text': isCorrect(option.optionValue)}">
       <pre class="message correct-message">{{ question.explanation }}.</pre>
     </div>
     <div *ngIf="isIncorrect(option.optionValue) && !!isCorrect(option.optionValue)">
@@ -12,19 +12,23 @@
   </section>
   <ol class="form-group">
     <mat-radio-group aria-labelledby="quiz-form-radio-group" formControlName="answer" name="answer"
-                     (change)="radioChange($event.value)" required>
+      (change)="radioChange($event.value)" required>
       <div class="radio-options" *ngFor="let option of question.options">
         <div class="balloon" [ngClass]="{'is-correct': isCorrect(option.optionValue),
         'is-incorrect': isIncorrect(option.optionValue)}">
           <mat-radio-button name="option-radio-button" class="option" [value]="option.optionValue"
-                          [checked]="question.selectedOption == option"
-                          >
-          <li>{{ option.optionText }}</li>
-         <!-- <mat-icon class="feedback-icon" *ngIf="isCorrect(option.optionValue)">done</mat-icon>
+            [checked]="question.selectedOption == option">
+            <div class="circlecont">
+              <div class="circle">
+                <div class="centeredtext">{{ option.optionText }}</div>
+              </div>
+              <div class="measure">{{ option.optionText }}</div>
+            </div>
+            <!-- <mat-icon class="feedback-icon" *ngIf="isCorrect(option.optionValue)">done</mat-icon>
           <mat-icon class="feedback-icon" *ngIf="isIncorrect(option.optionValue)">clear</mat-icon>-->
-        </mat-radio-button>
-        
-</div>
+          </mat-radio-button>
+
+        </div>
         
       </div>
     </mat-radio-group>

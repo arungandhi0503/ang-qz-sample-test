@@ -36,9 +36,7 @@ mat-card-header {
 }
 section.header {
 
-  .row {
-    display: inline;
-  }
+ 
   .score {
     float: right;
     background: #1fb804;
@@ -62,9 +60,6 @@ section.header {
 
   }
 
-  .pad-top20{
-    padding-top: 20px;
-  }
   .question-title {
     float: right;
     font-family: $font-stack;
@@ -102,12 +97,12 @@ section.header {
   float: left;
   border-radius: 0px;
   padding: 20px 20px;
-  color: #1fb804;
-  width: 100%;
+  color: #000;
+  width: 60%;
+  margin: 20px auto;
   height: auto;
-  min-height: 100px;
-  border: none !important;
-  background:#000;
+  border: 5px solid #000!important;
+  background:#e6d010;
 }
 
 section.paging {
@@ -159,3 +154,4 @@ section.progress-bar {
   min-width: 100%;
   min-height: 100%;
 }
+

@@ -1,8 +1,7 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-*{
+/**{
   cursor: url(https://cdn.jsdelivr.net/gh/arungandhi0503/ang-qz-sample-test@master/src/assets/images/ico_cursor.png) 120 120, auto !important;
-  
-}
+}*/
 body{
   font-family: 'Catamaran', sans-serif;
   background: rgb(2,0,36) linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(2,2,82,1) 53%, #000 100%) no-repeat; 
@@ -47,8 +46,11 @@ mat-card-subtitle {
 
 .header{
   position: relative;
-  margin:0px 0px;
-  z-index: 111;
+    margin: 0px 0px;
+    z-index: 111;
+    width: 100%;
+    display: table;
+    padding:20px;
 }
 
 .vid{
@@ -56,10 +58,10 @@ mat-card-subtitle {
   text-align: center;
 }
 
-.display_question_wrapper{ position: relative; padding-top: 20px;}
+.display_question_wrapper{ position: relative;}
 .display_text{ position: absolute; 
-  top: 0px;
-  left: 45px;
+  top: 30px;
+  left: 350px;
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
   -webkit-animation-fill-mode: both;
@@ -90,3 +92,17 @@ codelab-quiz-question{
 }
 
 
+video::-webkit-media-controls {
+  display: none;
+}
+
+/* Could Use thise as well for Individual Controls */
+video::-webkit-media-controls-play-button {}
+
+video::-webkit-media-controls-volume-slider {}
+
+video::-webkit-media-controls-mute-button {}
+
+video::-webkit-media-controls-timeline {}
+
+video::-webkit-media-controls-current-time-display {}
