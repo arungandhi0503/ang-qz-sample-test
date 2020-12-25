@@ -3,13 +3,15 @@
 <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
   <section class="messages" *ngFor="let option of question.options">
     <div *ngIf="isCorrect(option.optionValue)" [ngClass]="{'display_text': isCorrect(option.optionValue)}">
-      <pre class="message correct-message">{{ question.explanation }}.</pre>
+      <pre class="message correct-message">{{ question.explanation }}</pre>
     </div>
-    <div *ngIf="isIncorrect(option.optionValue) && !!isCorrect(option.optionValue)">
-      <mat-icon class="sentiment">sentiment_very_dissatisfied</mat-icon>&nbsp;&nbsp;
-      <pre class="message wrong-message">  அது தவறு. சரியான பதில் {{ question.explanation }}.</pre>
+    <div *ngIf="isIncorrect(option.optionValue)" [ngClass]="{'display_text': isIncorrect(option.optionValue)}">
+      <pre class="message wrong-message"> {{option.optionText}} </pre>  
     </div>
+    <mat-icon class="feedback-icon" *ngIf="isCorrect(option.optionValue)">done</mat-icon>
+    <mat-icon class="feedback-icon" [ngClass]="{'display_err': isIncorrect(option.optionValue)}" *ngIf="!isCorrect(option.optionValue) && isIncorrect(option.optionValue)">clear</mat-icon>
   </section>
+ 
   <ol class="form-group">
     <mat-radio-group aria-labelledby="quiz-form-radio-group" formControlName="answer" name="answer"
       (change)="radioChange($event.value)" required>
@@ -24,8 +26,7 @@
               </div>
               <div class="measure">{{ option.optionText }}</div>
             </div>
-            <!-- <mat-icon class="feedback-icon" *ngIf="isCorrect(option.optionValue)">done</mat-icon>
-          <mat-icon class="feedback-icon" *ngIf="isIncorrect(option.optionValue)">clear</mat-icon>-->
+            
           </mat-radio-button>
 
         </div>
@@ -34,3 +35,140 @@
     </mat-radio-group>
   </ol>
 </form>
+
+
+<!--
+<div class="content">
+	<svg viewbox="0 0 100 100" class="main-svg">
+	<path d="M24 55,
+					 C0 45, 10 20, 25 20, 
+					 C40 20, 50 45, 26 55" fill="#d83940" stroke="#be252c"/>
+	<path d="M24 55,
+					 Q25 57, 22 59, 
+					 Q25 59, 25 58, 
+					 Q26 59, 28 59, 
+					 Q25 57, 26 55" fill="#d83940" stroke="#be252c"/>
+	<path d="M24.5 55.5,
+					 L25.5 55.5" stroke-width="1" />
+	<path d="M25.5 55.8, 
+					 C16 58, 27 60, 23 70"  stroke-width="1"/>
+	<path d="M23 70,
+					 C18 78, 27 80, 23 90" stroke-width="1"/>
+	<ellipse cx="31.5" cy="25.5" rx="10" ry="13" fill="#de5d63" stroke="none" class="rotate"/>
+	<ellipse cx="30" cy="18" rx="4" ry="7" fill="#e17980" stroke="none" class="rotate-2"/>
+	<path d="M11 40,
+					 Q10 35, 12 30, 
+					 L13.5 32
+					 Q11.5 35, 12 39
+					 Z" fill="#f1d4d6" stroke="none" />
+	<path d="M12.5 38.5
+					 Q12 35, 14 32.5, 
+					 L15.5 34, 
+					 Q14 35,13.8 37, Z"
+				fill="#f1d4d6" stroke="none" />
+	<path d="M12.5 29, 
+					 Q15 25, 19 23, 
+					 Q18 24, 18 27, 
+					 Q15.5 28, 14 31,
+					 Z" stroke="none" fill="#f1d4d6" />
+	<path d="M14.5 31.5, 
+					 Q15.5 29, 18 28, 
+					 Q17.5 30, 18 31.5, 
+					 Q17 32, 16 33, 
+					 Z"
+				stroke="none" fill="#f1d4d6"/>
+	<path d="M30 52,
+					 Q40 46, 39.5 35, 
+					 L38, 34, 
+					 Q38 46, 30 52" 
+				stroke="none" fill="#f1d4d6"/>
+		<path d="M24.5 55.5,
+						 L25.5 55.5, 
+						 C15 59, 28 65, 25 72, 
+						 C19 83, 23 83, 25 90" stroke="black" stroke-width="1"/>
+
+</svg> 
+ <svg viewbox="0 0 100 100" class="second-svg">
+ <path d="M20 50, 
+					L21 45, 
+					C15 45, 14 45, 17 42
+					Q30 28, 35 32, 
+					Q33 34, 35.5 36, 
+					Q32 38, 34 44, 
+					Q32 46, 28 48, 
+					Q27 48, 27 46, 
+					Q25 48, 20 50"
+			 stroke="#be252c" fill="#d83940"/>
+	<path d="M19 43, 
+					 L23 39, 
+					 Q24 38, 28 38, 
+					 Q24 40, 22 43, 
+					 Z" fill="#de5d63" stroke="none"/>
+	<path d="M25 37, 
+					 Q27 35, 32 34, 
+					 L29 37, 
+					 Q27 36, 25 37"
+				fill="#de5d63" stroke="none"/>
+	<path  d="M10 53, 
+						Q10 46, 13 46, 
+						Q12 48, 15 53, 
+						C13 55, 11 50, 10 53" stroke="none" fill="#d83940"/>
+	<path d="M32 46, 
+					 L31 28, 
+					 L33 28, 
+					 Z" fill="#ded5d1" stroke="none"/>
+	<path d="M40 40, 
+					 L44 34, 
+					 L46 36, 
+					 Z" fill="#ded5d1" stroke="none"/>
+	<path d="M35 50, 
+					 L60 37, 
+					 L61 40, 
+					 Z" fill="#ded5d1" stroke="none"/>
+	<path d="M45 52, 
+					 L55 51, 
+					 L55 53,
+					 Z" fill="#ded5d1" stroke="none"/>
+	<path d="M20 60, 
+					 Q19 59, 24 56, 
+					 C22 65, 21 58,20 60 "
+				stroke="none" fill="#d83940"/>
+	<path d="M25 75, 
+					 C29 68, 18 70, 19 60, 
+					 Q23 63, 28 60, 
+					 Q28 63, 31 61, 
+					 Q31 64, 36 59, 
+					 C36 64, 39 59, 46 62, 
+					 C43 61, 36 74, 27 72, 
+					 C25 76, 30 79, 25 79, 
+					 C25 76, 22 78, 22 76, 
+					 Q24 76, 25 75
+					 " stroke="none" fill="#d83940"/>
+	<path d="M48 60, 
+					 Q46 58, 53 56, 
+					 C51 63, 50 57, 48 60" stroke="none" fill="#d83940"/>
+	 <rect x="50" y="45"width="10" height="5" rx="2"  fill="#d83940" stroke="none"/>
+	<path d="M50 35, 
+					 L52 30, 
+					 Q54 32, 59 31, 
+					 Q56 36, 50 35" stroke="none" fill="#b82c32"/>
+	<path d="M35 53, 
+					 L55 62, 
+					 L56 60, Z" fill="#ded5d1" stroke="none"/>
+	<path d="M56 34, 
+					 L55 28, 
+					 C60 28, 60 32, 56 34" stroke="none" fill="#d83940"/>
+	<path d="M26.5 72.2, 
+					 L26.1 72, 
+					 C5 66, 28 76, 15 87, 
+					 Q5 95, 15 97 " stroke="black" stroke-width="1"/>
+	<path d="M32 56,
+					 L30 75, 
+					 L34 75, Z" fill="#ded5d1" stroke="none"/>
+	<path d="M0 60,
+					 L20 56, 
+					 L2 62, Z" fill="#ded5d1" stroke="none"/>
+
+</svg> 
+</div>
+-->

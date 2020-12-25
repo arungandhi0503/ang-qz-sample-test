@@ -1,7 +1,7 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-/**{
-  cursor: url(https://cdn.jsdelivr.net/gh/arungandhi0503/ang-qz-sample-test@master/src/assets/images/ico_cursor.png) 120 120, auto !important;
-}*/
+*{
+  cursor: url(https://cdn.jsdelivr.net/gh/arungandhi0503/ang-qz-sample-test@master/src/assets/images/ico_cursor.png), auto !important;
+}
 body{
   font-family: 'Catamaran', sans-serif;
   background: rgb(2,0,36) linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(2,2,82,1) 53%, #000 100%) no-repeat; 
@@ -61,7 +61,7 @@ mat-card-subtitle {
 .display_question_wrapper{ position: relative;}
 .display_text{ position: absolute; 
   top: 30px;
-  left: 350px;
+  left: 290px;
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
   -webkit-animation-fill-mode: both;
@@ -96,13 +96,3 @@ video::-webkit-media-controls {
   display: none;
 }
 
-/* Could Use thise as well for Individual Controls */
-video::-webkit-media-controls-play-button {}
-
-video::-webkit-media-controls-volume-slider {}
-
-video::-webkit-media-controls-mute-button {}
-
-video::-webkit-media-controls-timeline {}
-
-video::-webkit-media-controls-current-time-display {}

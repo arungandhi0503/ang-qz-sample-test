@@ -19,6 +19,7 @@ export class QuestionComponent implements OnInit, OnChanges {
 
   ngOnInit() {
     this.buildForm();
+
   }
 
   ngOnChanges(changes: SimpleChanges) {
@@ -38,6 +39,8 @@ export class QuestionComponent implements OnInit, OnChanges {
     this.question.selectedOption = answer;
     this.answer.emit(answer);
     this.displayExplanation();
+    //this.addballonevent();
+
   }
 
   displayExplanation(): void {
@@ -49,7 +52,7 @@ export class QuestionComponent implements OnInit, OnChanges {
   }
 
   // mark the correct answer regardless of which option is selected once answered
-  isCorrect(option: string): boolean {
+  isCorrect(): boolean {
     return this.question.selectedOption === this.question.answer;
   }
 
@@ -61,4 +64,71 @@ export class QuestionComponent implements OnInit, OnChanges {
   onSubmit() {
     this.formGroup.reset({answer: null});
   }
+
+   
+
+   addballonevent(): any {
+    const normalMotion: any = document.querySelector<HTMLElement>('.normal-motion');
+    const mainSvg: any = document.querySelector<HTMLElement>('.main-svg');
+   const secondSvg: any = document.querySelector<HTMLElement>('.second-svg');
+   const thirdSvg: any = document.querySelector<HTMLElement>('.third-svg');
+   const content: any = document.querySelector<HTMLElement>('.content');
+    
+      setTimeout(() => {
+        mainSvg.setAttribute("style", "visibility:visible");
+        secondSvg.setAttribute("style", "visibility:visible");
+      }, 50);
+  
+      setTimeout(() => {
+        thirdSvg.setAttribute("style", "visibility:visible");
+      },150);
+  
+      setTimeout(() => {
+        content.setAttribute("style", "opacity:.9");
+      }, 170);
+  
+      setTimeout(() => {
+        content.setAttribute("style", "opacity:.8");
+      }, 190);
+  
+      setTimeout(() => {
+        content.setAttribute("style", "opacity:.7");
+      }, 210);
+  
+      setTimeout(() => {
+        content.setAttribute("style", "opacity:.6");
+      }, 230);
+  
+      setTimeout(() => {
+      content.setAttribute("style", "opacity:.4");
+      }, 250);
+  
+      setTimeout(() => {
+        content.setAttribute("style", "opacity:.3");
+      },270);
+  
+      setTimeout(() => {
+       content.setAttribute("style", "opacity:.2");
+      }, 290);
+  
+      setTimeout(() => {
+        content.setAttribute("style", "opacity:.1");
+      }, 300);
+  
+      setTimeout(() => {
+        content.setAttribute("style", "opacity:0");
+      }, 300);
+  
+      setTimeout(() => {
+        mainSvg.setAttribute("style", "visibility:visible");
+        secondSvg.setAttribute("style", "visibility:visible");
+        thirdSvg.setAttribute("style", "visibility:visible");
+        content.setAttribute("style", "opacity:1");
+      }, 50);
+      
+      setTimeout(() =>{
+        normalMotion.setAttribute("style", "visibility:visible");
+      }, 20);
+    }
 }
+

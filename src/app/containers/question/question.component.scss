@@ -3,7 +3,7 @@ $font-weight-max: 700;
 
 .quiz-bg{
  /* background: #59caff url(../../../assets/images/bg-cloud.png);*/
-  width: 100%;
+  width: 1200px;
   height: auto;
   min-height: 600px;
   margin: 0px auto;
@@ -101,13 +101,13 @@ section.header {
   width: 60%;
   margin: 20px auto;
   height: auto;
-  border: 5px solid #000!important;
-  background:#e6d010;
+  border: 0px solid #000!important;
+  background:#98ff61;
+  border-radius: 10px;
 }
 
 section.paging {
   width: 40rem;
-
   mat-card-actions {
     margin: -10px 0 10px 0;
 
