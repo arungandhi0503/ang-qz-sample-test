@@ -63,18 +63,6 @@ export class QuestionComponent implements OnInit {
     //this.countdown();
   }
 
-  ngAfterViewInit(){
-    let myVideo = document.getElementById('bgVideo') as HTMLFormElement;
-    myVideo.muted = false;
-    myVideo.loop = true;
-  
-    if (myVideo){
-      setTimeout(() => {
-        console.log("Play ?", myVideo.play() );
-        myVideo.play();
-      }, 1000);
-    }
-  }
 
   displayNextQuestion() {
     this.resetTimer();
