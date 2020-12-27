@@ -64,6 +64,7 @@ export class QuestionComponent implements OnInit {
   }
 
 
+
   displayNextQuestion() {
     this.resetTimer();
     this.increaseProgressValue();
